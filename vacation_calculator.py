@@ -162,28 +162,8 @@ class Holiday():
 
     def destination_list():
 
-        # Open the file "cities_to_visit.txt" in read mode using a with statement
-        with open("cities_to_visit.txt", "r") as cities:
-            # Initialize an empty list to store the cities
-            city_list = []
-
-            # Iterate through each line in the file
-            for lines in cities:
-                # Remove newline characters from the line
-                temp = lines.strip('\n')
-
-                # Split the line into words
-                temp = temp.split()
-
-                # Join the words into a single string separated by spaces
-                joined = " ".join(temp)
-
-                # Append the joined string to the city_list
-                city_list.append(joined)
-
-            # Iterate through each city in the list and print it on a separate line
-            for city in city_list:
-                print(city)
+        for key in Holiday.city_flight_cost.keys():
+            print(key)
 
     def hotel_room_type_list():
         
