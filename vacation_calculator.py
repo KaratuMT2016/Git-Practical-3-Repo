@@ -166,23 +166,9 @@ class Holiday():
             print(key)
 
     def hotel_room_type_list():
-        
-        with open("hotel_room_types.txt", "r") as hotel_rooms:
-            
-            hotel_room_list = []
 
-            for lines in hotel_rooms:
-
-                temp = lines.strip('\n')
-
-                temp = temp.split()
-
-                joined = " ".join(temp)
-
-                hotel_room_list.append(joined)
-
-            for room in hotel_room_list:
-                print(room)
+        for key in Holiday.hotel_price_list.keys():
+            print(key)
 
     def car_rental_list():
        
