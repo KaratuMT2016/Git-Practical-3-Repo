@@ -171,24 +171,9 @@ class Holiday():
             print(key)
 
     def car_rental_list():
-       
-        with open("car_rental_list.txt", "r") as car_rental_types:
-            
-            car_rental_type_list = []
 
-            for lines in car_rental_types:
-                
-                temp = lines.strip('\n')
-
-                temp = temp.split()
-
-                joined = " ".join(temp)
-
-                car_rental_type_list.append(joined)
-
-           
-            for car in car_rental_type_list:
-                print(car)
+        for key in Holiday.car_rental_price_list.keys():
+            print(key)
 
     # hotel_cost() method to compute hotel cost from the city_flight_cost dictionary   
     def hotel_cost(self, num_nights):
